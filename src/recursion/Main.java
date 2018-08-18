@@ -2,15 +2,15 @@ package recursion;
 
 public class Main {
 	
-	public static final String 
+	private static final String 
 			HEAD = "HEAD", 
 			TAIL = "TAIL",
 			FACTORIAL = "FACTORIAL",
 			FACTORIAL_ACCUMULATOR = "FACTORIAL_ACCUMULATOR",
 			EUCLIDEAN = "EUCLIDEAN";
 	
-	public static final int TEST_NUMBER = 5;
-	public static final int EUCLIDEAN_NUM1 = 16, EUCLIDEAN_NUM2 = 12;
+	private static final int TEST_NUMBER = 5;
+	private static final int EUCLIDEAN_NUM1 = 16, EUCLIDEAN_NUM2 = 12;
 
 	public static void main(String[] args) {
 		headTailRecursionMethod();
