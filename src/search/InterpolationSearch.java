@@ -13,6 +13,8 @@ package search;
  * 	a a a a a z z z
  * 
  * There will be more names with 'a' than 'z' so it does not make sense to go straight to middle.
+ * 
+ * Has a O(log logN) time complexity.
  */
 
 public class InterpolationSearch {
