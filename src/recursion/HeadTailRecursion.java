@@ -1,27 +1,29 @@
 package recursion;
 
-public class HouseBuildingProblem {
+// A look at the difference between 'head' and 'tail' recursion
+
+public class HeadTailRecursion {
 	
 	// head recursion
-	public void buildLayerHead(int height) {
+	public void headRecursion(int n) {
 		
-		if(height == 0) // need base case
+		if(n == 0) // need base case
 			return;
 		
-		buildLayerHead(height - 1);
+		headRecursion(n - 1);
 		
-		System.out.println(height); // 1 2 3 4
+		System.out.println(n); // 1 2 3 4
 	}
 	
 	// tail recursion
-	public void buildLayerTail(int height) {
+	public void tailRecursion(int n) {
 		
-		if(height == 0)
+		if(n == 0)
 			return;
 		
-		System.out.println(height); // 4 3 2 1
+		System.out.println(n); // 4 3 2 1
 		
-		buildLayerTail(height - 1);
+		tailRecursion(n - 1);
 	}
 
 	/* For 'head' case the numbers are ascending.
