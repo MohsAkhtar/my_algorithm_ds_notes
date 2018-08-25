@@ -3,20 +3,20 @@ package stack;
 public class Stack {
 
 	private int maxSize; // size of stack
-	private long[] stackArray; // container which will store list of items
+	private char[] stackArray; // container which will store list of items
 	private int top; // index position of last item placed on stack
 	
 	// initialise stack array
 	public Stack(int size) {
 		this.maxSize = size;
-		this.stackArray = new long[maxSize];
+		this.stackArray = new char[maxSize];
 		// start at -1 as nothing exists yet
 		// stacks start at 0 when something exists
 		this.top = -1;	
 	}
 	
 	// used to put things on stack
-	public void push(long j) {
+	public void push(char j) {
 		if(isFull()) {
 			System.out.println("Stack is already full");
 		} else {
@@ -26,10 +26,10 @@ public class Stack {
 	}
 	
 	// returns item that we popped so not void
-	public long pop() {
+	public char pop() {
 		if(isEmpty()) {
 			System.out.println("The stack is already empty");
-			return -1;
+			return '0';
 		} else {
 			// make copy of current top index position
 			int old_top = top;
@@ -39,7 +39,7 @@ public class Stack {
 	}
 	
 	// return item that is currently on top of stack
-	public long peak() {
+	public char peak() {
 		return stackArray[top];
 	}
 	
