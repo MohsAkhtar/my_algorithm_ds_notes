@@ -17,16 +17,25 @@ public class Stack {
 	
 	// used to put things on stack
 	public void push(long j) {
-		top++; // new item on stack so top increments
-		stackArray[top] = j; // assign value to that index position in stackArray
+		if(isFull()) {
+			System.out.println("Stack is already full");
+		} else {
+			top++; // new item on stack so top increments
+			stackArray[top] = j; // assign value to that index position in stackArray
+		}
 	}
 	
 	// returns item that we popped so not void
 	public long pop() {
-		// make copy of current top index position
-		int old_top = top;
-		top--;
-		return stackArray[old_top]; // return index position on item being removed
+		if(isEmpty()) {
+			System.out.println("The stack is already empty");
+			return -1;
+		} else {
+			// make copy of current top index position
+			int old_top = top;
+			top--;
+			return stackArray[old_top]; // return index position on item being removed
+		}		
 	}
 	
 	// return item that is currently on top of stack

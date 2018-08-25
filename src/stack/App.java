@@ -3,16 +3,19 @@ package stack;
 public class App {
 
 	public static void main(String[] args) {
-		Stack theStack = new Stack(10);
-		theStack.push(20);
-		theStack.push(40);
-		theStack.push(60);
-		theStack.push(80);
+		StringReverse strRev = new StringReverse(3);
+		strRev.push('h');
+		strRev.push('e');
+		strRev.push('y');
 		
-		while(!theStack.isEmpty()) {
-			long value = theStack.pop();
+		String reverseString = "";
+		
+		while(!strRev.isEmpty()) {
+			char value = strRev.pop();
+			reverseString+= value;
 			System.out.println(value);
 		}
+		System.out.println(reverseString);
 	}
 
 }
