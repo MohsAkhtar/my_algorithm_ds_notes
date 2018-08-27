@@ -18,6 +18,7 @@ public class Queue {
 	// insert items into queue
 	public void insert(long j) {
 		// if we reach the max size of array and have more items
+		// This is a circular queue
 		if(rear == maxSize -1) {
 			rear = -1; // reset rear, basically will be overwriting
 		}
